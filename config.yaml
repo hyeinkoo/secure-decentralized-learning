@@ -1,0 +1,32 @@
+# data
+data_path: "./data"
+dataset: "cifar10"
+
+model: "fc-nn" # "baseimg"
+# img model
+num_hiddens: 1000
+num_classes: 10
+# text model
+max_features: 10000
+sequence_length: 250
+embedding_dim: 250
+
+# training
+batch_size: 20
+num_epochs: 15
+
+# server
+adversarial_init: False
+
+# client
+num_clients: 10
+dropout_rate: 0.3
+
+# rgm
+rgm_params:
+  dh_params: [14, 29]
+#  n_mix_min: 5
+#  n_mix_max: 10
+  n_mix: [5, 8]
+  scale: [0, 1]
+  frac: 0.3
